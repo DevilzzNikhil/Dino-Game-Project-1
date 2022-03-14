@@ -29,6 +29,7 @@ function reset() {
   playGame.style.visibility = "hidden";
   obstacle.style.display = "block";
   score = 0;
+  dino.style.display = "block"
   scoreCont.innerHTML = "Your Score: " + score;
   cross = true;
   newScore.style.visibility = "hidden";
@@ -38,23 +39,7 @@ function reset() {
 }
 function interval() {
   on_off.addEventListener("click", changeImage);
-  function changeImage() {
-
-    if (im === 2) {
-      im = 1;
-      console.log("hello");
-      on_off.src = "off.png";
-      audio.pause();
-    } 
-    
-    else 
-    {
-      im = 2;
-      console.log("bye");
-      on_off.src = "s.png";
-      audio.play();
-    }
-  }
+  
   setInterval(() => {
     values();
 
@@ -98,6 +83,24 @@ function interval() {
       }, 1000);
     }
   }, 20);
+}
+function changeImage() {
+
+  if (im === 2) {
+    im = 1;
+    console.log("hello");
+    on_off.src = "off.png";
+    audio.pause();
+    audio.currentTime = 0;
+  } 
+  
+  else 
+  {
+    im = 2;
+    console.log("bye");
+    on_off.src = "s.png";
+    audio.play();
+  }
 }
 
 function updateScore(score) {
