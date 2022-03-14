@@ -59,18 +59,7 @@ function interval() {
       newScore.innerHTML = "Your Score is  " + (score - 1);
       newScore.style.visibility = "visible";
       scoreCont.style.visibility = "hidden";
-      if (im === 2) 
-      {
-       im = 1;
-       on_off.src = "off.png";
-      } 
-  
-      else 
-      {
-       im = 2;
-       on_off.src = "s.png";
-      }
-      
+     } 
       else if (offsetX < 145 && cross) {
       score += 1;
       updateScore(score);
