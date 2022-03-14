@@ -9,7 +9,7 @@ var display = document.querySelector(".gameContainer");
 var offsetX;
 var offsetY;
 var audio = new Audio("Game_Music.mp3");
-var over = new Audio("Game_OVer.wav");
+var over = new Audio("Game_Over.wav");
 var on_off = document.getElementById("speaker");
 
 var im = 2;
